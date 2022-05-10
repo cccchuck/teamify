@@ -4,7 +4,7 @@ import TheSideBar from '../TheSideBar/TheSideBar.vue'
 </script>
 
 <template>
-  <main>
+  <main w-1440px mx-auto flex bg-white>
     <TheSideBar />
     <RouterView />
   </main>
