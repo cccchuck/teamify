@@ -70,7 +70,7 @@ const generateNumberNotification = (num: number) => {
 const notifications: Ref<INotification[]> = ref([])
 
 onMounted(() => {
-  generateNumberNotification(5)
+  generateNumberNotification(6)
 
   setInterval(() => {
     notifications.value.splice(0, 1)

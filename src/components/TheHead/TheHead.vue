@@ -1,7 +1,26 @@
+<script lang="ts" setup>
+const getGrettingText = () => {
+  const date = new Date()
+  const hours = date.getHours()
+
+  if (hours >= 7 && hours < 12) {
+    return 'Good morning Chuck'
+  } else if (hours >= 12 && hours < 18) {
+    return 'Good afternoon Chuck'
+  } else if (hours >= 18 && hours < 24) {
+    return 'Good evening Chuck'
+  } else {
+    return 'Good morning Chuck'
+  }
+}
+</script>
+
 <template>
   <div flex p-3xl items-center justify-between>
     <div>
-      <h3 class="text-1.625em" c-color-heading lh-40px>Good Morning Chuck</h3>
+      <h3 class="text-1.625em" c-color-heading lh-40px>
+        {{ getGrettingText() }}
+      </h3>
       <p class="text-0.875em" c-color-tip lh-20px>Hope you have a good day</p>
     </div>
 
