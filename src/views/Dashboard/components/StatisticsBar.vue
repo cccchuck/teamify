@@ -185,7 +185,7 @@ onMounted(() => {
         </div>
 
         <div>
-          <div id="polar-bar" w-280px h-280px></div>
+          <div id="polar-bar" w-300px h-300px ml--2em mr--3em></div>
         </div>
       </div>
     </div>
