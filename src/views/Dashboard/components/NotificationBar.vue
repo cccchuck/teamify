@@ -85,7 +85,11 @@ onMounted(() => {
       <p class="text-1.125em lh-2.5em font-bold c-color-heading">
         Notifications
       </p>
-      <p class="text-0.875em lh-1.5em font-bold c-color-purple">View All</p>
+      <p
+        class="text-0.875em lh-1.5em font-bold c-color-purple transition-300 hover:translate-y--3px hover:cursor-pointer"
+      >
+        View All
+      </p>
     </div>
 
     <div

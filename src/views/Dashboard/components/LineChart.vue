@@ -104,8 +104,8 @@ onMounted(() => {
     <div
       p-2em
       rounded-4
-      transition-all-300
       c-bar-border
+      transition-all-300
       hover:cursor-pointer
       hover:shadow-2xl
       hover:translate-y--5px
@@ -120,9 +120,9 @@ onMounted(() => {
             mx-1em
           >
             <p
-              rounded-1em
               w-1em
               h-1em
+              rounded-1em
               :style="{ 'background-color': lineCategory.color }"
             ></p>
             <span class="text-0.875em ml-0.5em c-color-tip">{{

@@ -162,7 +162,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <div p-2em rounded-4 c-bar-border ml-1em>
+    <div ml-1em p-2em rounded-4 c-bar-border>
       <div flex items-center justify-between>
         <h3 class="text-1.125em lh-2.5em">Employees</h3>
         <p c-color-tip text-xs>Apr 15 - May 15</p>
@@ -173,9 +173,9 @@ onMounted(() => {
           <div v-for="pie in pieAxis" :key="pie.name" mt-2em>
             <div flex items-center>
               <p
-                rounded-50
                 w-1em
                 h-1em
+                rounded-50
                 :style="{ 'background-color': pie.color }"
               ></p>
               <span ml-2 c-color-tip text-xs>{{ pie.name }}</span>
