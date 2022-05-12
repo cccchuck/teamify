@@ -15,6 +15,16 @@ const router = createRouter({
           component: () => import('@/views/Dashboard/DashboardView.vue'),
         },
         {
+          path: '/teams',
+          name: 'teams',
+          component: () => import('@/views/Teams/TeamsView.vue'),
+        },
+        {
+          path: '/employees',
+          name: 'employees',
+          component: () => import('@/views/Employees/EmployeesView.vue'),
+        },
+        {
           path: '/meetings',
           name: 'meetings',
           component: () => import('@/views/Meetings/MeetingsView.vue'),
@@ -24,7 +34,17 @@ const router = createRouter({
           name: 'tasks',
           component: () => import('@/views/Tasks/TasksView.vue'),
         },
+        {
+          path: '/settings',
+          name: 'settings',
+          component: () => import('@/views/Settings/SettingsView.vue'),
+        },
       ],
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('@/views/NotFound/NotFoundView.vue'),
     },
   ],
 })

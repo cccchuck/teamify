@@ -18,11 +18,6 @@ const navListA = [
     title: 'Employees',
     icon: 'i-mdi-account-outline',
   },
-  {
-    name: 'projects',
-    title: 'Projects',
-    icon: 'i-mdi-briefcase-outline',
-  },
 ]
 const navListB = [
   {
