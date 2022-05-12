@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 import * as echarts from 'echarts/core'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { LineChart } from 'echarts/charts'
@@ -27,6 +27,10 @@ function renderLineChart(option: EChartsOption) {
   const lineChartDom: HTMLElement | null = document.getElementById('line-chart')
   const lineChart = echarts.init(lineChartDom as HTMLElement)
   lineChart.setOption(option)
+}
+
+function dispose() {
+  echarts.dispose(document.getElementById('line-chart') as HTMLElement)
 }
 
 const option: EChartsOption = {
@@ -97,6 +101,10 @@ const lineCategories = [
 
 onMounted(() => {
   renderLineChart(option)
+})
+
+onBeforeUnmount(() => {
+  dispose()
 })
 </script>
 

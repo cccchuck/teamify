@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { onMounted, onBeforeUnmount } from 'vue'
 import * as echarts from 'echarts/core'
 import {
   GridComponent,
@@ -29,6 +29,11 @@ function renderPolarBar(option: EChartsOption) {
   const polarBarDom: HTMLElement | null = document.getElementById('polar-bar')
   const polarBarChart = echarts.init(polarBarDom as HTMLElement)
   polarBarChart.setOption(option)
+}
+
+function dsipose() {
+  echarts.dispose(document.getElementById('bar') as HTMLElement)
+  echarts.dispose(document.getElementById('polar-bar') as HTMLElement)
 }
 
 const barOption: EChartsOption = {
@@ -136,6 +141,10 @@ const pieAxis = [
 onMounted(() => {
   renderBar(barOption)
   renderPolarBar(polarBarOption)
+})
+
+onBeforeUnmount(() => {
+  dsipose()
 })
 </script>
 
