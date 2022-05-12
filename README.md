@@ -8,9 +8,9 @@ UI 出自 Figma [@Nickelfox](https://www.figma.com/@Nickelfox)
 
 线上地址：
 
-https://teamify.vercel.app
+<https://teamify.vercel.app>
 
-https://teamify.web.cloudendpoint.cn
+<https://teamify.web.cloudendpoint.cn>
 
 ## Project Setup
 
