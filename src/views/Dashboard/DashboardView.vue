@@ -7,17 +7,13 @@ import NotificationBar from './components/NotificationBar.vue'
 </script>
 
 <template>
-  <main flex-1>
-    <TheHead />
+  <div flex>
+    <StatisticsBar />
+    <TotalBar />
+  </div>
 
-    <div flex>
-      <StatisticsBar />
-      <TotalBar />
-    </div>
-
-    <div flex>
-      <LineChart />
-      <NotificationBar />
-    </div>
-  </main>
+  <div flex>
+    <LineChart />
+    <NotificationBar />
+  </div>
 </template>

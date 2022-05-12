@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import * as echarts from 'echarts/core'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { LineChart } from 'echarts/charts'
@@ -81,6 +81,7 @@ const option: EChartsOption = {
       },
     },
   ],
+  color: ['#FB896B', '#6956E5'],
 }
 
 const lineCategories = [

@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
 const navListA = [
   {
     name: 'dashboard',
@@ -38,6 +41,10 @@ const navListB = [
     icon: 'i-mdi-cog-outline',
   },
 ]
+
+const goto = (name: string) => {
+  router.push({ name })
+}
 </script>
 
 <template>
@@ -62,6 +69,7 @@ const navListB = [
       <div
         v-for="nav in navListA"
         :key="nav.name"
+        @click="goto(nav.name)"
         :class="{
           'c-color-purple': $route.name === nav.name,
           'font-bold': $route.name === nav.name,
@@ -83,6 +91,7 @@ const navListB = [
       <div
         v-for="nav in navListB"
         :key="nav.name"
+        @click="goto(nav.name)"
         :class="{
           'c-color-purple': $route.name === nav.name,
           'font-bold': $route.name === nav.name,
