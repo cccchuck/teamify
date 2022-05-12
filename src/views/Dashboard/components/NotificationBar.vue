@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 import type { Ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface INotification {
   name: string
@@ -9,7 +10,9 @@ interface INotification {
   time: string
 }
 
-const avatarUrls = [
+const router = useRouter()
+
+const avatarUrls: string[] = [
   'https://tva1.sinaimg.cn/large/e6c9d24ely1h1wv868h3ej20u011hgoa.jpg',
   'https://tva1.sinaimg.cn/large/e6c9d24ely1h1wg8m1zloj208a08adfy.jpg',
   'https://tva1.sinaimg.cn/large/e6c9d24ely1h1wg8bcupyj208a08ajrg.jpg',
@@ -22,9 +25,9 @@ const avatarUrls = [
   'https://tva1.sinaimg.cn/large/e6c9d24ely1h23iouy0ejj20k00jjwfz.jpg',
 ]
 
-const departments = ['HR', 'Market', 'Developers', 'Design', 'Sales']
+const departments: string[] = ['HR', 'Market', 'Developers', 'Design', 'Sales']
 
-const names = [
+const names: string[] = [
   'Chuck',
   'Jennifer',
   'Steve',
@@ -37,22 +40,22 @@ const names = [
   'Bob',
 ]
 
-const generateRandomAvatarUrl = () => {
+const generateRandomAvatarUrl = (): string => {
   const randomIndex = Math.floor(Math.random() * avatarUrls.length)
   return avatarUrls[randomIndex]
 }
 
-const generateRandomDepartment = () => {
+const generateRandomDepartment = (): string => {
   const randomIndex = Math.floor(Math.random() * departments.length)
   return departments[randomIndex]
 }
 
-const generateRandomName = () => {
+const generateRandomName = (): string => {
   const randomIndex = Math.floor(Math.random() * names.length)
   return names[randomIndex]
 }
 
-const generateRandomNotification = () => {
+const generateRandomNotification = (): INotification => {
   return {
     name: generateRandomName(),
     avatarUrl: generateRandomAvatarUrl(),
@@ -87,6 +90,7 @@ onMounted(() => {
       </p>
       <p
         class="text-0.875em lh-1.5em font-bold c-color-purple transition-300 hover:translate-y--3px hover:cursor-pointer"
+        @click="router.push('/notifications')"
       >
         View All
       </p>
