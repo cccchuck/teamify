@@ -2,7 +2,7 @@
 
 选修 Web 课结课课程设计
 
-用到了这些东西：Vue3.js && TypeScript && Vite && UnoCSS && ECharts
+用到了这些东西：[Vue3.js](https://github.com/vuejs/vue) && [TypeScript](https://github.com/microsoft/TypeScript) && [Vite](https://github.com/vitejs/vite) && [UnoCSS](https://github.com/unocss/unocss) && [ECharts](https://github.com/apache/echarts)
 
 UI 出自 Figma [@Nickelfox](https://www.figma.com/@Nickelfox)
 
